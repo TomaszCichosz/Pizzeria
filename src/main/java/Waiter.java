@@ -7,6 +7,9 @@ public class Waiter {
     }
 
     public Pizza getPizza() {
+        pizzaBuilder.buildDough();
+        pizzaBuilder.buildSauce();
+        pizzaBuilder.buildTopping();
         return pizzaBuilder.getPizza();
     }
 }
