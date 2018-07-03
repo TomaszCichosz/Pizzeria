@@ -6,13 +6,11 @@ public class Menu {
 
         Scanner scanner = new Scanner(System.in);
         Waiter waiter = new Waiter();
+        int pizzaOrder;
         boolean nextPizza = true;
         while (nextPizza) {
-            System.out.println("Margherita: 1");
-            System.out.println("Hawaiian: 2");
-            System.out.println("Pepperoni: 3");
-            System.out.println("Exit: 0");
-            int pizzaOrder = scanner.nextInt();
+            printMenuInfo();
+            pizzaOrder = scanner.nextInt();
             switch (pizzaOrder) {
                 case 1:
                     waiter.setPizzaBuilder(new MargheritaBuilder());
@@ -31,5 +29,12 @@ public class Menu {
                     break;
             }
         }
+    }
+
+    private static void printMenuInfo() {
+        System.out.println("Margherita: 1");
+        System.out.println("Hawaiian: 2");
+        System.out.println("Pepperoni: 3");
+        System.out.println("Exit: 0");
     }
 }
