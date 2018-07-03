@@ -1,4 +1,5 @@
 import org.junit.Test;
+import constants.Constants;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,9 +15,9 @@ public class WaiterTest {
 
         waiter.setPizzaBuilder(new MargheritaBuilder());
 
-        assertEquals(margherita.getDough(), waiter.getPizza().getDough());
-        assertEquals(margherita.getSauce(), waiter.getPizza().getSauce());
-        assertEquals(margherita.getTopping(), waiter.getPizza().getTopping());
+        assertEquals(Constants.MARGHERITADOUGH, waiter.getPizza().getDough());
+        assertEquals(Constants.MARGHERITASAUCE, waiter.getPizza().getSauce());
+        assertEquals(Constants.MARGHERITATOPPING, waiter.getPizza().getTopping());
     }
 
     @Test
@@ -29,9 +30,9 @@ public class WaiterTest {
 
         waiter.setPizzaBuilder(new HawaiianBuilder());
 
-        assertEquals(hawaiian.getDough(), waiter.getPizza().getDough());
-        assertEquals(hawaiian.getTopping(), waiter.getPizza().getTopping());
-        assertEquals(hawaiian.getSauce(), waiter.getPizza().getSauce());
+        assertEquals(Constants.HAWAIIANDOUGH, waiter.getPizza().getDough());
+        assertEquals(Constants.HAWAIIANTOPPING, waiter.getPizza().getTopping());
+        assertEquals(Constants.HAWAIIANSAUCE, waiter.getPizza().getSauce());
     }
 
     @Test
@@ -44,8 +45,8 @@ public class WaiterTest {
 
         waiter.setPizzaBuilder(new PepperoniBuilder());
 
-        assertEquals(pepperoni.getSauce(), waiter.getPizza().getSauce());
-        assertEquals(pepperoni.getTopping(), waiter.getPizza().getTopping());
-        assertEquals(pepperoni.getDough(), waiter.getPizza().getDough());
+        assertEquals(Constants.PEPPERONISAUCE, waiter.getPizza().getSauce());
+        assertEquals(Constants.PEPPERONITOPPING, waiter.getPizza().getTopping());
+        assertEquals(Constants.PEPPERONIDOUGH, waiter.getPizza().getDough());
     }
 }
