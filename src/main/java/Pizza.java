@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Pizza {
 
     private String dough;
@@ -14,6 +16,16 @@ public class Pizza {
 
     public void setSauce(String sauce) {
         this.sauce = sauce;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pizza pizza = (Pizza) o;
+        return Objects.equals(dough, pizza.dough) &&
+                Objects.equals(topping, pizza.topping) &&
+                Objects.equals(sauce, pizza.sauce);
     }
 
     @Override
