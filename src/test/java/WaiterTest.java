@@ -16,4 +16,30 @@ public class WaiterTest {
         pizzaBuilder.buildDough();
         assertEquals(pizzaBuilder.getPizza(), waiter.getPizza());
     }
+
+    @Test
+    public void given_Waiter_when_SetHawaiianBuilder_then_ReturnHawaiianPizza() {
+        Waiter waiter = new Waiter();
+
+        waiter.setPizzaBuilder(new HawaiianBuilder());
+
+        PizzaBuilder pizzaBuilder = new HawaiianBuilder();
+        pizzaBuilder.buildTopping();
+        pizzaBuilder.buildSauce();
+        pizzaBuilder.buildDough();
+        assertEquals(pizzaBuilder.getPizza(), waiter.getPizza());
+    }
+
+    @Test
+    public void given_Waiter_when_SetPepperoniBuilder_then_ReturnPepperoniPizza() {
+        Waiter waiter = new Waiter();
+
+        waiter.setPizzaBuilder(new PepperoniPizza());
+
+        PizzaBuilder pizzaBuilder = new PepperoniPizza();
+        pizzaBuilder.buildTopping();
+        pizzaBuilder.buildSauce();
+        pizzaBuilder.buildDough();
+        assertEquals(pizzaBuilder.getPizza(), waiter.getPizza());
+    }
 }
