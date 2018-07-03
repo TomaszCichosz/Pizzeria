@@ -7,6 +7,6 @@ public class Waiter {
     }
 
     public Pizza getPizza() {
-        return pizzaBuilder.pizza;
+        return pizzaBuilder.getPizza();
     }
 }
