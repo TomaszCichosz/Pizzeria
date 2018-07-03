@@ -34,9 +34,9 @@ public class WaiterTest {
     public void given_Waiter_when_SetPepperoniBuilder_then_ReturnPepperoniPizza() {
         Waiter waiter = new Waiter();
 
-        waiter.setPizzaBuilder(new PepperoniPizza());
+        waiter.setPizzaBuilder(new PepperoniBuilder());
 
-        PizzaBuilder pizzaBuilder = new PepperoniPizza();
+        PizzaBuilder pizzaBuilder = new PepperoniBuilder();
         pizzaBuilder.buildTopping();
         pizzaBuilder.buildSauce();
         pizzaBuilder.buildDough();

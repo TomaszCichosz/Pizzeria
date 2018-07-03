@@ -21,7 +21,7 @@ public class Menu {
                     System.out.println(waiter.getPizza());
                     break;
                 case 3:
-                    waiter.setPizzaBuilder(new PepperoniPizza());
+                    waiter.setPizzaBuilder(new PepperoniBuilder());
                     System.out.println(waiter.getPizza());
                     break;
                 case 0:
