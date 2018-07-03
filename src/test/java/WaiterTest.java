@@ -14,7 +14,9 @@ public class WaiterTest {
 
         waiter.setPizzaBuilder(new MargheritaBuilder());
 
-        assertEquals(margherita, waiter.getPizza());
+        assertEquals(margherita.getDough(), waiter.getPizza().getDough());
+        assertEquals(margherita.getSauce(), waiter.getPizza().getSauce());
+        assertEquals(margherita.getTopping(), waiter.getPizza().getTopping());
     }
 
     @Test
@@ -27,7 +29,9 @@ public class WaiterTest {
 
         waiter.setPizzaBuilder(new HawaiianBuilder());
 
-        assertEquals(hawaiian, waiter.getPizza());
+        assertEquals(hawaiian.getDough(), waiter.getPizza().getDough());
+        assertEquals(hawaiian.getTopping(), waiter.getPizza().getTopping());
+        assertEquals(hawaiian.getSauce(), waiter.getPizza().getSauce());
     }
 
     @Test
@@ -40,6 +44,8 @@ public class WaiterTest {
 
         waiter.setPizzaBuilder(new PepperoniBuilder());
 
-        assertEquals(pepperoni, waiter.getPizza());
+        assertEquals(pepperoni.getSauce(), waiter.getPizza().getSauce());
+        assertEquals(pepperoni.getTopping(), waiter.getPizza().getTopping());
+        assertEquals(pepperoni.getDough(), waiter.getPizza().getDough());
     }
 }
