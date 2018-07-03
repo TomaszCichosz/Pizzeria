@@ -18,6 +18,18 @@ public class Pizza {
         this.sauce = sauce;
     }
 
+    public String getDough() {
+        return dough;
+    }
+
+    public String getTopping() {
+        return topping;
+    }
+
+    public String getSauce() {
+        return sauce;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
